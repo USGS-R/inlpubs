@@ -1,4 +1,4 @@
-url: http://usgs-r.github.io/inlpubs/
+url: https://usgs-r.github.io/inlpubs/
 navbar:
   type: default
   left:
@@ -22,3 +22,4 @@ reference:
   contents: pubs
 - title: Function
   contents: MineText
+s
