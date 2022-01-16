@@ -107,6 +107,7 @@ s <- sprintf("<!--html_preserve-->%s<!--/html_preserve-->", paste(x, collapse = 
 cat(s)
 ```
 
+
 <!-- Embedded References -->
 
 [R]: https://www.r-project.org/
