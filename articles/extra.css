@@ -1,0 +1,49 @@
+.subtitle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: smaller !important;
+}
+
+a.pubs-tag:hover {
+  opacity: 0.7;
+}
+
+a.doi {
+  background-color: #337ab7;
+}
+
+a.pubs-tag {
+  text-decoration: none;
+  outline: none;
+  color: #eee;
+}
+
+a.other {
+  color: #000000;
+}
+
+.pubs-tag {
+  border: 0px solid;
+  border-color: #b9b9b9 #b9b9b9 #a0a0a0;
+  background: #ddd;
+  background-position: 0 0;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 0 3px 0;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 0.27em;
+  height: 1.84em;
+  line-height: 1.84em;
+  padding: 0 0.461em;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 14px;
+  border-left: 5px solid #eee;
+}
