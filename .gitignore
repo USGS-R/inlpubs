@@ -1,0 +1,7 @@
+/.RData
+/.Rhistory
+/*.tar.gz
+/*.zip
+/README.html
+.Rproj.user
+docs

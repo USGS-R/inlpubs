@@ -1,0 +1,118 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+# inlpubs
+
+[![USGS Category](https://img.shields.io/badge/USGS-Research-blue.svg)](https://owi.usgs.gov/R/packages.html#research)
+[![CRAN Version](https://www.r-pkg.org/badges/version/inlpubs)](https://CRAN.R-project.org/package=inlpubs)
+[![pipeline status](https://code.usgs.gov/inl/inlpubs/badges/master/pipeline.svg)](https://code.usgs.gov/inl/inlpubs/-/commits/master)
+[![coverage report](https://code.usgs.gov/inl/inlpubs/badges/master/coverage.svg)](https://code.usgs.gov/inl/inlpubs/-/commits/master)
+
+## Description
+
+The [R] package **inlpubs** may be used to search and analyze `r nrow(inlpubs::pubs)` publications that cover the `r diff(range(as.integer(apply(inlpubs::pubs, 1, function(x) x$citation$year)))) + 1L`-year history of the U.S. Geological Survey (USGS), Idaho Water Science Center, [Idaho National Laboratory Project Office] (INLPO). The INLPO publications were authored by `r sum(!duplicated(do.call("c", inlpubs::pubs$citation$author)))` researchers trying to better understand the effects of waste disposal on water contained in the eastern Snake River Plain aquifer and the availability of water for long-term consumptive and industrial use. Information contained within these publications is crucial to the management and use of the aquifer by the Idaho National Laboratory (INL) and the State of Idaho. USGS geohydrologic studies and monitoring, which began in 1949, were done in cooperation with the U.S. Department of Energy Idaho Operations Office.
+
+A word cloud highlighting the 200 most popular words used in titles and abstracts is shown below.
+
+![wordcloud](man/figures/wordcloud.png)
+
+## Installation
+
+The current release is available on [CRAN], which you can install using the following command:
+
+```r
+install.packages("inlpubs")
+```
+
+To install the development version, you need to clone the repository and build from source, or run:
+
+```r
+if (!requireNamespace("remotes")) install.packages("remotes")
+remotes::install_gitlab(
+  repo = "inl/inlpubs",
+  auth_token = Sys.getenv("GITLAB_PAT"),
+  host = "code.usgs.gov",
+  dependencies = TRUE
+)
+```
+
+## Usage
+
+Examples are given in the package help pages. To access these documents, run:
+
+```r
+library("inlpubs")
+help(package = "inlpubs")
+```
+
+Package vignettes may be viwed through your web browser using the command:
+
+```r
+browseVignettes("inlpubs")
+```
+
+## Author
+
+Jason C. Fisher (ORCID iD [0000-0001-9032-8912])
+
+## Point of Contact
+
+Jason C. Fisher (<jfisher@usgs.gov>)
+
+## Suggested Citation
+
+To cite **inlpubs** in publications, please use:
+
+```{r "citation", echo=FALSE, results="asis"}
+print(utils::citation(package = "inlpubs"), style = "textVersion")
+```
+
+## Contributing
+
+We welcome your contributions and suggestions for how to make these materials more useful to the community. Please feel free to comment on the [issue tracker] or open a [merge request] to contribute.
+
+```{r, echo=FALSE, results="asis"}
+files <- c("CODE_OF_CONDUCT.md", "DISCLAIMER.md", "LICENSE.md")
+for (f in files) {
+  txt <- readLines(f, encoding = "UTF-8")
+  is <- grepl("^(#+)\\s*(.*)\\s*$", txt)
+  txt[is] <- gsub("#\\s", "## ", txt[is])
+  cat(txt, "\n\n", sep = "\n")
+}
+```
+
+## Support
+
+The Idaho National Laboratory Project Office of the USGS supports the development and maintenance of **inlpubs**. Resources are available primarily for maintenance and responding to user questions. Priorities on the development of new features are determined by the development team.
+
+## Additional Publication Details
+
+Additional metadata about this publication, not found in other parts of the page is in this table.
+
+```{r "details", echo=FALSE, results="asis"}
+x <- c(
+  "Publication type" = "Formal R language package",
+  "DOI" = "10.5066/P9I3GWWU",
+  "Year published" = "2022",
+  "Year of version" = format(utils::packageDate("inlpubs"), format = "%Y"),
+  "Version" = format(utils::packageVersion("inlpubs")),
+  "IPDS" = "IP-130851"
+)
+x <- sprintf("  <tr><th scope='row'>%s</th><td>%s</td></tr>", names(x), x)
+x <- c("<table><tbody>", x, "</tbody></table>  <cr>")
+s <- sprintf("<!--html_preserve-->%s<!--/html_preserve-->", paste(x, collapse = "\n"))
+cat(s)
+```
+
+<!-- Embedded References -->
+
+[R]: https://www.r-project.org/
+[Idaho National Laboratory Project Office]: https://www.usgs.gov/centers/idaho-water-science-center/science/idaho-national-laboratory-project-office
+[CRAN]: https://CRAN.R-project.org/package=inlpubs
+[BibTeX]: https://en.wikipedia.org/wiki/BibTeX
+[0000-0001-9032-8912]: https://orcid.org/0000-0001-9032-8912
+[issue tracker]: https://code.usgs.gov/inl/inlpubs/-/issues
+[merge request]: https://code.usgs.gov/inl/inlpubs/-/merge_requests

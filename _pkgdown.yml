@@ -1,0 +1,24 @@
+url: http://usgs-r.github.io/inlpubs/
+navbar:
+  type: default
+  left:
+  - text: Reference
+    href: reference/index.html
+  - text: Articles
+    menu:
+    - text: Bibliography of the INLPO
+      href: articles/inl-bibliography.html
+    - text: Contributing Authors to INLPO
+      href: articles/inl-authors.html
+    - text: Analysis of Publications in the INLPO
+      href: articles/inl-analysis.html
+  - text: News
+    href: news/index.html
+  right:
+  - icon: fa-gitlab fa-lg
+    href: https://code.usgs.gov/inl/inlpubs
+reference:
+- title: Dataset
+  contents: pubs
+- title: Function
+  contents: MineText

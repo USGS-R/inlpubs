@@ -1,0 +1,16 @@
+utils::citHeader(sprintf("To cite %s in publications, please use:", meta$Package))
+
+utils::citEntry(
+  entry = "TechReport",
+  title = "inlpubs---Bibliographic information for the U.S. Geological Survey Idaho National Laboratory Project Office",
+  author = eval(parse(text=meta$Authors)),
+  institution = "U.S. Geological Survey",
+  type = "Software Release",
+  year = "2022",
+  note = sprintf("R package version %s", meta$Version),
+  address = "Reston, Va.",
+  doi = "10.5066/P9I3GWWU",
+  url = "https://doi.org/10.5066/P9I3GWWU",
+  key = "inlpubs-package",
+  textVersion = "Fisher, J.C., 2022, inlpubs---Bibliographic information for the U.S. Geological Survey Idaho National Laboratory Project Office: U.S. Geological Survey software release, R package, Reston, Va., https://doi.org/10.5066/P9I3GWWU."
+)

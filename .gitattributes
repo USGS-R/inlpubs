@@ -1,0 +1,19 @@
+# Project
+* text=auto
+
+# Text
+*.bib  text
+*.css  text
+*.csv  text
+*.json text
+*.md   text
+*.R    text
+*.Rd   text
+*.Rmd  text
+*.txt  text
+*.tsv  text
+*.yml  text
+
+# Binary
+*.png binary
+*.rda binary

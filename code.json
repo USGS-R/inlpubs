@@ -1,0 +1,46 @@
+[
+  {
+    "name": "inlpubs",
+    "organization": "U.S. Geological Survey",
+    "description": "Bibliographic information for the U.S. Geological Survey Idaho National Laboratory Project Office.",
+    "version": "1.0.0",
+    "status": "Development",
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain, CC0-1.0",
+          "URL": "https://code.usgs.gov/inl/inlpubs/-/raw/master/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": "https://code.usgs.gov/inl/inlpubs/-/tree/master",
+    "downloadURL": "https://code.usgs.gov/inl/inlpubs/-/archive/master/inlpubs-master.zip",
+    "disclaimerURL": "https://code.usgs.gov/inl/inlpubs/-/raw/master/DISCLAIMER.md",
+    "repositoryURL": "https://code.usgs.gov/inl/inlpubs.git",
+    "vcs": "git",
+
+    "laborHours": 100,
+
+    "tags": [
+      "doi|https://doi.org/10.5066/P9I3GWWU",
+      "R",
+      "USGS"
+    ],
+
+    "languages": [
+      "R"
+    ],
+
+    "contact": {
+      "name": "Jason C. Fisher",
+      "email": "jfisher@usgs.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2022-01-07"
+    }
+  }
+]
