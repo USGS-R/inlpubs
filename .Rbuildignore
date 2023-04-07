@@ -20,3 +20,4 @@
 ^\.github$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^inlpubs\.Rproj$
